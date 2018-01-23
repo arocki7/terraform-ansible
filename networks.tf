@@ -15,16 +15,25 @@ resource "aws_subnet" "tf-awx" {
   }
 }
 
-resource "aws_subnet" "tf-web" {
+resource "aws_subnet" "tf-weba" {
   vpc_id = "${aws_vpc.tf-vpc.id}"
   cidr_block = "172.21.1.0/24"
   availability_zone = "eu-west-1a"
   map_public_ip_on_launch = true
   tags {
-  Name = "tf-web"
+  Name = "tf-weba"
   }
 }
 
+resource "aws_subnet" "tf-webb" {
+  vpc_id = "${aws_vpc.tf-vpc.id}"
+  cidr_block = "172.21.2.0/24"
+  availability_zone = "eu-west-1b"
+  map_public_ip_on_launch = true
+  tags {
+  Name = "tf-webb"
+  }
+}
 
 resource "aws_internet_gateway" "igw_tf" {
   vpc_id = "${aws_vpc.tf-vpc.id}"
