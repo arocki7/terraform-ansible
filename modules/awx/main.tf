@@ -34,7 +34,7 @@ resource "aws_security_group" "test-awx" {
 resource "aws_instance" "awx" {
   # AMI ID for CentOS
   ami           = "${var.ami}"
-  instance_type = "t2.micro"
+  instance_type = "t2.small"
   key_name      =  "${var.key_name}"
   vpc_security_group_ids = ["${aws_security_group.test-awx.id}"]
   subnet_id = "${var.subnet_id}"
