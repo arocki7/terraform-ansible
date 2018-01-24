@@ -19,7 +19,7 @@ resource "aws_autoscaling_group" "as-tf-web" {
   launch_configuration = "${aws_launch_configuration.al-tf-web.name}"
   min_size = 1
   max_size = 2
-  desired_capacity = 1
+  desired_capacity = 2
   target_group_arns = ["${aws_lb_target_group.tf-tg.arn}"]
   vpc_zone_identifier = ["${var.subnet_weba}","${var.subnet_webb}"]
 
