@@ -5,6 +5,7 @@ resource "aws_launch_configuration" "al-tf-web" {
   image_id       = "${var.ami}"
   security_groups = ["${aws_security_group.test-web.id}"]
   key_name      =  "${var.key_name}"
+  user_data = "${data.template_file.installnginx.rendered}"
 
   lifecycle {
     create_before_destroy = true
@@ -38,4 +39,9 @@ resource "aws_autoscaling_group" "as-tf-web" {
       propagate_at_launch = true
     },
   ]
+}
+
+
+data "template_file" "installnginx" {
+  template = "${file("${path.module}/installnginx.tpl")}"
 }
