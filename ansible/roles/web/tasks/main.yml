@@ -1,7 +1,7 @@
 ---
 
 - name: Install Nginx and things.
-  yum: name={{ nginx }} state=present
+  yum: name={{ item }} state=present
   with_items:
    - nginx
    - aws-cli
