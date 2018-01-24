@@ -1,4 +1,4 @@
-# Terraform - AWX in AWS with Web Server
+# Terraform - Implementation of NGINX Web server with Ansible in AWS
 
 ## Summary
 
