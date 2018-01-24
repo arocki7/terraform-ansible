@@ -1,4 +1,4 @@
-# Terraform - Implementation of NGINX Web server with Ansible in AWS
+# Terraform & Ansible - Autoscaling nginx Web Server in AWS
 
 ## Summary
 
