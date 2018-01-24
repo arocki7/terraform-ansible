@@ -18,7 +18,7 @@ Security groups for each Servers.
 
 Use the below commands to build, review and execute.
 
-terraform init
-terraform get
-terraform plan
-terraform apply
+terraform init  
+terraform get  
+terraform plan  
+terraform apply  
