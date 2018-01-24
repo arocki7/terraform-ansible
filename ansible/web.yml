@@ -1,0 +1,10 @@
+---
+# Ansible for Web Server Build
+# Author: Arockiasamy K
+# Version: 1.0
+
+- name: Deploy NGINX web Server using ansible.
+  hosts: all
+
+  roles:
+   - web

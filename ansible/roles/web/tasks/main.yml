@@ -1,0 +1,10 @@
+---
+
+- name: Install Nginx and things.
+  yum: name={{ nginx }} state=present
+  with_items:
+   - nginx
+   - aws-cli
+
+- name: Starting the nginx service.
+  service: name=nginx state=started enabled=yes

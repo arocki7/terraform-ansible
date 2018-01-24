@@ -1,6 +1,6 @@
 # Create Autolaunch configuration
 resource "aws_launch_configuration" "al-tf-web" {
-  name           = "al-tf-web"
+  name = "al-tf-web"
   instance_type  = "t2.micro"
   image_id       = "${var.ami}"
   security_groups = ["${aws_security_group.test-web.id}"]

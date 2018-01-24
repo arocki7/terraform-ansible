@@ -1,5 +1,5 @@
 #!/bin/bash
-yum install nginx git -y;
-service nginx start;
-chkconfig nginx on;
+yum install git -y;
 pip install ansible;
+git clone https://github.com/arocki7/terraform-ansible.git /tmp/terraform-ansible;
+ansible-playbook -i /tmp/terraform-ansible/ansible/hosts /tmp/terraform-ansible/ansible/web.yml
